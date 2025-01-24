@@ -2,7 +2,6 @@ import sys
 from base64 import b64encode, b64decode
 import tenseal as ts
 from time import time
-import socket
 import pickle
 from math import log2
 from parameters import sigma_max, output_bits, plain_modulus, poly_modulus_degree, number_of_hashes, bin_capacity, alpha, ell, hash_seeds
@@ -10,6 +9,8 @@ from cuckoo_hash import Cuckoo
 from auxiliary_functions import windowing
 from oprf import order_of_generator, client_prf_online_parallel
 import httpx
+
+# TODO: Get parameters from server's /parameters endpoint
 
 oprf_client_key = 12345678910111213141516171819222222222222
 
